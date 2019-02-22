@@ -129,15 +129,14 @@ class Student
      end.first
    end
    
-   def self.first_X_students_in_grade_10(num)
+   def self.all_students_in_grade_X (x)
       sql = <<-SQL
       SELECT *
       FROM students
-      WHERE grade = 10
-      LIMIT ?
+      WHERE grade = ?
     SQL
 
-     DB[:conn].execute(sql, num).map do |row|
+     DB[:conn].execute(sql, x).map do |row|
        self.new_from_db(row)
      end
    end

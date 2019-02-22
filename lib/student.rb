@@ -90,5 +90,10 @@ class Student
    end
    
    
-   def self.
+   def self.selfstudents_below_12th_grade
+     
+   end
+   
+   
+   def 
 end
